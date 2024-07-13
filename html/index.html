@@ -1,0 +1,102 @@
+<!DOCTYPE html> <!-- Etiqueta es para usar html actual, sino se visualizara como un html de los años 90-->
+<html> <!--- Etiqueta raíz -->
+<head> <!-- Etiqueta: características que no siempre visualiza el usuario -->
+    <title>Mi primera web</title> <!-- Etiqueta de título de la página web -->
+    <style>
+      table, th, td {
+        border: 1px solid black;
+      }
+    </style>
+</head> <!--- Etiqueta de cierre -->
+<body> <!--- Etiqueta donde se incluye el contenido de la web -->
+  
+  <table style="width: 500px;">
+    <!-- tr es table row = es decir una fila-->
+    <!-- thead y tbody es para scrollear en ciertos navegadores -->
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hola beats</td>
+        <td>Gratis</td>
+      </tr>
+      <tr>
+        <td>Chanchito feliz</td>
+        <td>$99.99</td>
+      </tr>
+      <tr>
+        <td>Chanchito muy feliz</td>
+        <td>$200</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <td></td>
+      <td>Total: $299.99</td>
+    </tfoot>
+  </table>
+
+
+  <!--- ul es lista no ordenada -->
+  <ul>
+    <!-- li es list item -->
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+    <li>Elemento 4</li>
+  </ul>
+
+  <!--- ol es lista ordenada -->
+  <ol>
+    <li value="50">Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+    <li>Elemento 4</li>
+    <ol>
+      <li style="list-style-type: lower-roman;">Subelemento 1</li>
+      <li style="list-style-type: lower-roman;">Subelemento 2</li>
+      <li style="list-style-type: lower-roman;">Subelemento 3</li>
+    </ol>
+  </ol>
+
+    <form action="/formulario" method="POST"> <!--formualrio puede ser .php por ej. GET envia valores a traves de la url. POST--> <!--Formulario para que ingrese datos el usuario. Ni GET ni POST son seguros en insepccionar se puede acceder a los datos para la seguridad hay que encriptar-->
+        <label for="Nombre">Nombre</label>
+        <input value="Chanchito" type="text" id="Nombre" name="Nombre" placeholder="Nombre"/>
+        <!-- propiedad type: text, submit (boton), email, password, radio, checkbox, file -->
+        <br>
+        <br>
+        <label for="Apellido">Apellido</label>
+        <input value="feliz" type="text" id="Apellido" name="Apellido" placeholder="Apellido">
+        <br>
+        <br>
+        <label for="Comentario">Comentario</label>
+        <textarea cols="50" rows="10" name="Comentario" id="Comentario" placeholder="Ingrese comentario">Este es un valor por defecto</textarea>
+        <br>
+        <br>
+        <button type="button"><img src="img/Logo1.jpg" height="12"/> boton</button> <!--Se puede incluir etiqueta de imagen para el boton-->
+        <button type="reset">Tipo reset</button>
+        <button type="submit">Tipo submit</button>
+      </form>
+    <!-- No utilizar los h para cambiar fuentes ya que son utilizados por los buscadores web-->
+    <h1>Mi primer heading</h1>
+    <h2>Mi segundo heading</h2>
+    <h3>Mi tercer heading</h3>
+    <h4>Mi cuarto heading</h4>
+    <h5>Mi quinto heading</h5>
+    <h6>Chanchito feliz</h6>
+    <!-- h7 no existe -->
+     <p>Chanchito feliz está muy feliz.</p>
+     <p>Chanchito triste está muy triste.</p>
+     <hr> <!-- Se agrega una línea divisoria -->
+     <h2>Chanchito Felipe</h2>
+     <p>
+        Este texto es <span style="color: blue;">mucho más largo</span> y es para <br>la etiqueta de span! <!-- br salto de linea -->
+     </p> <!-- span es para seleccionar una parte del texto de forma silenciosa para referenciar por ej -->
+     <!-- Este texto es un comentario y no aparece en el explorador -->
+      <a target="_blank" href="https://www.google.com/">Ir a google</a> <!-- Etiqueta de hipervinculo. Con target blank abre el link en otra pestaña-->
+      <img src="img/Logo1.jpg" height="400"/> <!--Colocando la diagonal al final no es necesario cerrar la etiqueta. El width mantiene el aspecto-->
+</body> <!--- Etiqueta de cierre -->
+</html> <!--- Etiqueta cierre -->
