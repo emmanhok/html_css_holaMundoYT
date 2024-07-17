@@ -1,0 +1,264 @@
+#titulo{
+    color: tomato;
+}
+/*
+en css el segundo p.especial anula el p.texto por eso el ultimo es el que define qué estilo se empleara 
+*/
+p.texto{
+    color: slateblue;
+}
+
+p.especial{
+    color: green;
+}
+
+div p{
+    color: blueviolet;
+}
+
+div h2, div h3{ /* el h3 lleva el div antes sino se aplicara a todos los h3*/
+    color: chartreuse;
+}
+
+*{/* selector universal */
+    font-size: 24px;
+    /* color: black; este selector universal cambia todo peeeero si  hay otro selector anterior que uso la propiedad color no se modificara ésta */
+}
+/*
+.color{
+    color: #ff0000;
+}
+.color{
+    color: rgb(red, green, blue); 0, 0, 0
+}
+*/
+/*border inicia dandole el grosor con px*/
+.color{
+    /* border: 5px red outset; */
+    border-style: solid;
+    border-color: blue;
+    border-radius: 5px;
+    border-width: 2rem;
+}
+/* 
+dotted
+dashed
+solid
+groove
+ridge
+inset
+outset
+none
+hidden
+*/
+/*
+medidas
+px
+in pulgada
+pc pica (12 puntos)
+pt punto
+cm
+mm
+em es relativo al tamaño de la fuente
+rem es relativo al tamaño de la fuente raiz
+*/
+
+#fondo{
+    background-color: rgba(255, 0, 0);
+    /* opacity: 0.3; */
+    height: 200px;
+    /* background-image: url("img/Logo4.png"); */
+    
+    /* background-repeat: repeat-x; */
+    /* background-position: left center; */
+    background: #f00 url("img/Logo4.png") repeat-y center bottom / 100px 100px;
+
+    /* background-size: 100px 100px; */
+}
+
+/*
+la propiedad background a secas tiene que estar antes de los demas background para que se aplique
+background color 
+rgba la a es la transparencia
+background size: 
+    auto
+    cover
+    contain
+background repeat
+    no repeat
+    repeat x
+    repeat y
+background position
+    top
+    center
+    bottom
+*/
+
+.margen{
+    background-color: blueviolet;
+    /* asignar un solo valor en margin se aplica a top right bottom y left por igual, con padding funciona igual 
+    Usando 2 valores se generaliza un mismo valor a top y bottom y un mismo valor a right y left
+    Usando 3 valores el primero es top el segundo horizontal y el tercero el inferior
+    */
+    margin: 15px; /* En margin a secas podemos aplicar top right bottom y left (fuera del elemento) */
+    padding: 30px 15px 5px; /* Se genera un espacio dentro del elemento*/
+    border: solid 3px black; /* Se encuentra entre margin y padding*/
+    height: 200px;
+    /*width aplica al elemento pero no aplica al margin padding ni al border*/
+    width: 50px;
+    overflow: scroll;
+    /* overflow
+        visible
+        hidden
+        scroll    
+    */
+    outline: 1px solid red;
+}
+
+.text{
+    font-family: "Playwrite CU", sans-serif;
+    /* font family sirve por si alguna fuente no funciona pasa a la siguiente
+        se puede traer fuentes desde internet 
+        por ej fuentes de google que se agregan con link en el head del html */
+    text-align: justify;
+    /* text aling
+        center
+        left
+        rigth
+        justify
+         */
+    text-decoration: overline;
+    /* text decoration
+        none
+        underline
+        line-through
+        overline
+        */
+    text-shadow: 3px 5px 5px red;
+    /* text shadow
+        el 3 valor es para difuminar
+        */
+}
+
+/* El orden del color de texto de los a(links) es fundamental
+el orden debe ser el siguiente:
+    link
+    visited
+    hover
+    active */
+
+a:link{
+    color: violet;
+}
+
+a:visited{
+    color: gray;
+}
+
+a:hover{
+    color: yellow;
+}
+
+a:active{
+    color: red;
+}
+
+ul{
+    background-color: green;
+    /* list style type pueden ser
+        none
+        circle
+        georgian
+        etc
+    */
+    list-style-type: none;
+    /* el padding 0 es para sacar el padding de los puntos de la lista */
+    padding: 0px;
+    /* list style position es para incorporar al texto o no los puntos de la lista */
+    /* list-style-position: inside; */
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: solid 1px #eee;
+    padding: 5px;
+}
+
+th{
+    background-color: red;
+    color: white;
+    text-align: left;
+}
+
+tr:nth-child(even){
+    /* nth-child()
+        puede ser even impar u odd par */
+    background-color: #eee;
+}
+
+tr:hover{
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+span{
+    display: block;
+    /* display: none; */
+    /* visibility: none; */
+    max-width: 300px;
+    background-color: #f00;
+}
+
+/* las etiquetas que vienen por defecto en bloque son
+<a> <span> <img> */
+
+.inline{
+    display: inline;
+}
+
+#position{
+    position: sticky;
+    left: 20px;
+    top: 25px;
+}
+
+.left {
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+.right {
+    float: right;
+}
+
+.container{
+    height: 200px;
+}
+
+.column{
+    /* border: solid 0px #eee; */
+    /* border-radius: 5px;      */
+    margin: 0;
+    padding: 10px 0px;
+    width: 33.3%;
+}
+
+.inline-block{
+    /* a la propiedad display inline no se le puede asignar height ni witdh */
+    display: inline-block;
+    height: 55px;
+    background-color: red;
+}
+
+.center{
+    padding: 50px 0;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    background-color: red;
+}
